@@ -25,21 +25,21 @@ export const settingsType = {
       type: "text",
     },
   ],
-  //   preview: {
-  //     select: {
-  //       language: "language",
-  //     },
-  //     prepare: ({ language }) => {
-  //       const languageName =
-  //         language &&
-  //         languages.flatMap((option) =>
-  //           option.value === language ? [option.title] : []
-  //         );
-  //       return {
-  //         title: "About - " + language,
-  //         subtitle: language ? `${languageName}` : "No language set",
-  //         media: UserIcon,
-  //       };
-  //     },
-  //   },
+  preview: {
+    select: {
+      language: "language",
+    },
+    prepare: ({ language }) => {
+      const languageName =
+        language &&
+        languages.flatMap((option) =>
+          option.value === language ? [option.title] : []
+        );
+      return {
+        title: "settings - " + language,
+        subtitle: language ? `${languageName}` : "No language set",
+        media: CogIcon,
+      };
+    },
+  },
 };

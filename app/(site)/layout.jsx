@@ -3,6 +3,7 @@ import "../globals.css";
 // import Navbar from "@/components/navbar";
 import { cookies } from "next/headers";
 import { getSetting } from "@/sanity/lib/querys";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,16 +13,42 @@ export async function generateMetadata() {
   const description = setting?.description;
 
   return {
+    metadataBase: new URL("http://localhost:3000"),
     title: {
       template: `%s | ${title}`,
       default: title,
     },
-    description: description,
+    images: "/og.png",
     icons: "/logo.svg",
+    description: description,
     openGraph: {
-      images: "/logo.svg",
+      title: {
+        template: `%s | ${title}`,
+        default: title,
+      },
+      description: description,
+      image: "/og.png",
+    },
+    twitter: {
+      title: {
+        template: `%s | ${title}`,
+        default: title,
+      },
+      description: description,
+      image: "/og.png",
     },
   };
+
+  // title: {
+  //   template: `%s | ${title}`,
+  //   default: title,
+  // },
+  // description: description,
+  // icons: "/logo.svg",
+  // // openGraph: {
+  // //   images: "/logo.svg",
+  // // },
+  // };
 }
 
 // export const metadata = {
@@ -43,12 +70,20 @@ export default function RootLayout({ children }) {
       lang={lang}
       dir={lang === "ar" ? "rtl" : "ltr"}
       className="scroll-smooth"
+      suppressHydrationWarning
     >
       <body className={`flex justify-center items-center ${inter.className}`}>
-        <main className="max-w-[800px] w-full min-h-screen ">
-          {/* <Navbar lang={lang} /> */}
-          {children}
-        </main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="max-w-[800px] w-full min-h-screen ">
+            {/* <Navbar lang={lang} /> */}
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

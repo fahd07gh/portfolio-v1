@@ -8,7 +8,10 @@ export default function AboutSection({ title, data }) {
       </h2>
       <div className="flex flex-row flex-wrap gap-2 px-2">
         {data.map((skill, index) => (
-          <div key={index} className="bg-secondary p-2 rounded-lg ">
+          <div
+            key={skill + "-" + index}
+            className="bg-secondary p-2 rounded-lg "
+          >
             <h3 className="text-base font-bold">{skill}</h3>
           </div>
         ))}

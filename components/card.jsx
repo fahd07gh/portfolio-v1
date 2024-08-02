@@ -3,11 +3,10 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 export default async function Card({ title, description, image, slug, lang }) {
   const readMore = lang == "en" ? "Read more" : "اقرأ المزيد";
-  const arrow = lang == "en" ? "&rarr;" : "&larr;";
   return (
     <Link
       href={`project/${slug}`}
-      className="bg-secondary p-2 rounded-lg shadow-lg cursor-pointer"
+      className="bg-secondary p-2 rounded-lg shadow-lg cursor-pointer "
     >
       <Image
         src={
@@ -25,6 +24,11 @@ export default async function Card({ title, description, image, slug, lang }) {
       <h3 className="text-2xl font-bold line-clamp-1">{title}</h3>
       <p className="line-clamp-2 h-12">{description}</p>
       <div className="pt-2">
+        <button className=" bg-button px-2 py-1 font-extrabold rounded-lg  uppercase">
+          See more
+        </button>
+      </div>
+      {/* <div className="pt-2">
         <span className=" font-extrabold underline underline-offset-4 ">
           {readMore}
         </span>
@@ -32,7 +36,7 @@ export default async function Card({ title, description, image, slug, lang }) {
           {" "}
           &rarr;
         </span>
-      </div>
+      </div> */}
     </Link>
   );
 }

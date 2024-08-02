@@ -113,7 +113,9 @@ export const projectType = {
         );
       return {
         title: title,
-        subtitle: language ? `${languageName}` : "No language set",
+        subtitle: language
+          ? `${languageName}`
+          : "No language set this will not be displayed",
         media: media || ImagesIcon,
       };
     },

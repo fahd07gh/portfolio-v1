@@ -5,9 +5,9 @@ export default async function SocialMedia() {
   const socialMedia = await getSocialMedia();
   return (
     <>
-      {socialMedia.Links.map((link, index) => (
+      {socialMedia?.Links?.map((link, index) => (
         <Link
-          key={index}
+          key={link.name + "-" + index}
           href={link.url}
           className="has-tooltip bg-secondary hover:bg-secondary/60 p-2 flex justify-center items-center rounded-md cursor-pointer"
         >

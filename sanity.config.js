@@ -26,7 +26,7 @@ export default defineConfig({
         { id: "ar", title: "Arabic" },
         { id: "en", title: "English" },
       ],
-      schemaTypes: ["about", "project"],
+      schemaTypes: ["about", "project", "settings"],
     }),
     structureTool(),
     // Vision is a tool that lets you query your content with GROQ in the studio

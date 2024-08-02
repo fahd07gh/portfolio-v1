@@ -22,13 +22,17 @@ export default function CustomPortableText({ className, value }) {
         return <p>{children}</p>;
       },
       h2: ({ children }) => (
-        <h5 className="mb-2 text-7xl font-bold">{children}</h5>
+        <h2 className="mb-2 text-7xl font-bold">{children}</h2>
       ),
       h3: ({ children }) => (
-        <h5 className="mb-2 text-xl font-bold">{children}</h5>
+        <h3 className="mb-2 text-4xl font-bold">{children}</h3>
       ),
+      h4: ({ children }) => (
+        <h4 className="mb-2 text-2xl font-bold">{children}</h4>
+      ),
+
       blockquote: ({ children }) => (
-        <blockquote className="bg-accent  p-3 rounded-lg text-xl ">
+        <blockquote className="bg-accent p-3 rounded-lg text-xl ">
           {children}
         </blockquote>
       ),
@@ -54,6 +58,11 @@ export default function CustomPortableText({ className, value }) {
           </a>
         );
       },
+      code: ({ children }) => (
+        <code className="bg-accent p-1 rounded-lg text-xl w-full block">
+          {children}
+        </code>
+      ),
     },
 
     types: {

@@ -23,8 +23,8 @@ export default function Contact({ lang }) {
         </form>
       </div>
       <div>
-        <div className="w-full h-px my-4 bg-color/20 relative">
-          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="w-full h-px my-4 bg-color relative">
+          <span className="opacity-100 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             {Or}
           </span>
         </div>

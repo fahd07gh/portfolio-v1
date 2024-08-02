@@ -27,7 +27,7 @@ export async function getProjects() {
     lang = cookieStore.get("lang").value;
   }
   return client.fetch(
-    `*[_type == "project"&& language == $lang]{
+    `*[_type == "project"&& language == $lang] | order(date) [0...6]{
         language,        
         title,
         "slug": slug.current,

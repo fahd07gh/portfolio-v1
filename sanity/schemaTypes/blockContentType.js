@@ -59,19 +59,6 @@ export const blockContentType = {
               },
             ],
           },
-          {
-            title: "Internal link",
-            name: "internalLink",
-            icon: ProjectsIcon,
-            type: "object",
-            fields: [
-              {
-                name: "reference",
-                type: "reference",
-                to: [{ type: "project" }],
-              },
-            ],
-          },
         ],
       },
     },
