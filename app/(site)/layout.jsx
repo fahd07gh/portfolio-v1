@@ -4,6 +4,7 @@ import "../globals.css";
 import { cookies } from "next/headers";
 import { getSetting } from "@/sanity/lib/querys";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -83,6 +84,7 @@ export default function RootLayout({ children }) {
           <main className="max-w-[800px] w-full min-h-screen ">
             {/* <Navbar lang={lang} /> */}
             {children}
+            <SpeedInsights />
           </main>
         </ThemeProvider>
       </body>

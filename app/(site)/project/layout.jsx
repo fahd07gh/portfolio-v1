@@ -1,11 +1,10 @@
-import LanguageButton from "@/components/languageButton";
 import { ThemsToggle } from "@/components/ThemsToggle";
 import Link from "next/link";
 
 export const metadata = {
   title: "project",
   description: "Fahad Abdullah's project",
-  image: "/logo.svg",
+  images: "/logo.svg",
 };
 
 export default function Layout({ children }) {
@@ -19,8 +18,8 @@ export default function Layout({ children }) {
       <header className="flex items-center justify-center gap-6 fixed top-5 left-0 w-full z-50">
         {/* gap-5  pe-5*/}
 
-        <nav className="max-w-[400px] w-full h-10 bg-secondary flex items-center justify-between pe-3  rounded-full relative">
-          <div className="w-full flex flex-nowrap justify-start items-center text-xl h-full">
+        <nav className="max-w-[400px] w-full h-10 bg-secondary border flex items-center justify-between pe-3 rounded-full relative">
+          <div className="w-full flex flex-nowrap justify-start items-center text-xl h-full ">
             {navLinks[lang].map((link, index) => (
               <Link
                 key={link + "-" + index}
@@ -32,7 +31,7 @@ export default function Layout({ children }) {
               </Link>
             ))}
           </div>
-          <Link
+          {/* <Link
             href="/#project"
             className="absolute -translate-x-1/2 left-1/2 -z-10"
           >
@@ -51,9 +50,8 @@ export default function Layout({ children }) {
                 fill="white"
               />
             </svg>
-          </Link>
+          </Link> */}
           <div className="flex gap-2">
-            {/* <LanguageButton /> */}
             <ThemsToggle />
           </div>
         </nav>
