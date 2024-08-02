@@ -1,6 +1,6 @@
 "use client";
+import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
-import React, { useState, useCallback, useEffect } from "react";
 import LanguageButton from "./languageButton";
 import { ThemsToggle } from "./ThemsToggle";
 
