@@ -13,21 +13,22 @@ export async function generateMetadata() {
   const description = setting?.description;
 
   return {
-    metadataBase: new URL("http://localhost:3000"),
+    // metadataBase: new URL("http://localhost:3000"),
     title: {
       template: `%s | ${title}`,
       default: title,
     },
-    images: "/og.png",
     icons: "/logo.svg",
+    images: "/og.png",
     description: description,
+
     openGraph: {
       title: {
         template: `%s | ${title}`,
         default: title,
       },
       description: description,
-      image: "/og.png",
+      images: "/og.png",
     },
     twitter: {
       title: {
@@ -35,7 +36,7 @@ export async function generateMetadata() {
         default: title,
       },
       description: description,
-      image: "/og.png",
+      images: "/og.png",
     },
   };
 
