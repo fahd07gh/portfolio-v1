@@ -8,7 +8,7 @@ export default async function Project({ lang }) {
   let title = lang === "en" ? "PROJECT" : "مشروع";
   projects.reverse();
   return (
-    <section>
+    <section className="mb-10">
       <SectionTitle title={title} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 px-2">
         {projects?.map((project, index) => {

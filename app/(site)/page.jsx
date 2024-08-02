@@ -4,7 +4,7 @@ import Project from "@/sections/Project";
 import Contact from "@/sections/Contact";
 import { cookies } from "next/headers";
 
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 
 export default async function pgae() {
   const cookieStore = cookies();
@@ -22,7 +22,7 @@ export default async function pgae() {
       <Home lang={lang} />
       <About lang={lang} />
       <Project lang={lang} />
-      <Contact lang={lang} />
+      {/* <Contact lang={lang} /> */}
     </>
   );
 }

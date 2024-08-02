@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function Layout({ children }) {
   const navLinks = {
-    en: ["Home", "About", "Project", "Contact"],
-    ar: ["الرئيسية", "عني", "مشروع", "تواصل"],
+    en: ["Home", "About", "Project"],
+    ar: ["الرئيسية", "عني", "مشروع"],
   };
   let lang = "en";
   return (
